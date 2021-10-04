@@ -2,7 +2,7 @@
 #
 # Name: u4_1_file_diff.sh - Anzeige von unterschiedlichen Zeilen zweier Dokumente
 # -----------------
-# SYNOPSIS: u4_1_file_diff.sh [File1] [File2]
+# SYNOPSIS: u4_1_file_diff.sh File1 File2
 # Description: Dieses Bashscript vergleicht die Zeilen von zwei gewünschten Dateien
 # Es gibt alle unterschiedliche Zeilen in einem neuen File (diffRows.txt) aus.
 #
