@@ -17,7 +17,7 @@
 # Autoren: Arnel Deomic
 # Datum: 28.09.2021
 
-echo "************************************"
+echo "*********************************************************"
 echo "Dokument 1: $1"
 echo "Dokument 2: $2"
 echo ""
@@ -36,7 +36,7 @@ if [[ -f "$1" && -f "$2" ]]; then
   fi
 
   echo "Das grössere Dokument ist $biggerFile"
-  echo "------------------------------------"
+  echo "---------------------------------------------------------"
   echo ""
   echo "Ausgabe der Zeilen:"
   #Aus grossen Dokument Anzahl Zeilen holen. +1 weil die Länge bei 0 beginnt.
@@ -53,7 +53,7 @@ if [[ -f "$1" && -f "$2" ]]; then
     #Aktuelle Zeile des kleinen Dokumentes
     currentRowSmallerFile=$(sed -n ${i}p "$smallerFile")
 
-    echo "------------------------------------"
+    echo "---------------------------------------------------------"
     echo "Zeile: $i | $biggerFile| $currentRowBiggerFile"
     echo "Zeile: $i | $smallerFile| $currentRowSmallerFile"
 
@@ -67,10 +67,10 @@ if [[ -f "$1" && -f "$2" ]]; then
     ((i=i+1))
   done
 
-  echo "------------------------------------"
+  echo "---------------------------------------------------------"
   echo ""
   echo "Insgesamt sind $differentRows Zeilen ungleich"
-  echo "************************************"
+  echo "*********************************************************"
 else
   echo "Ungültige Dokumentangabe"
 fi
