@@ -23,10 +23,9 @@
 # Datum: 05.10.2021
 
 reNumbers='^[0-9]+$'
-randomNumber=$[$RANDOM %20 + 1]
+randomNumber=$((RANDOM % 20 + 1))
 tries=5
 
-echo "$randomNumber"
 echo "Bitte geben Sie eine Zahl zwischen 1 und 20 ein:"
 
 until [[ $randomNumber -eq $playerNumber ]]; do
