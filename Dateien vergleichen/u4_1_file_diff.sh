@@ -54,8 +54,8 @@ if [[ -f "$1" && -f "$2" ]]; then
     currentRowSmallerFile=$(sed -n ${i}p "$smallerFile")
 
     echo "------------------------------------"
-    echo "Zeile: $i | $biggerFile: $currentRowBiggerFile"
-    echo "Zeile: $i | $smallerFile: $currentRowSmallerFile"
+    echo "Zeile: $i | $biggerFile| $currentRowBiggerFile"
+    echo "Zeile: $i | $smallerFile| $currentRowSmallerFile"
     echo "------------------------------------"
 
     #Überprüfung ob aktuelle Zeile von beiden Dokumenten nicht gleich ist
