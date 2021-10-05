@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #Check if a Process is already running
-#Author: Aaron Läuchli
+#Author: Arnel Deomic
 #Datum: 14.09.21
 
 clear

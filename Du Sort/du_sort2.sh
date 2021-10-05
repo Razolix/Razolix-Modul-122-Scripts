@@ -14,7 +14,7 @@
 # du_sort_1_2_2 -k2r  -> sortiert alph. auf zweite spalte
 #                        umgekehrte Reihenfolge
 #
-# Autor: Aaron Laeuchli
+# Autor: Arnel Deomic
 # Version: 3.2.3
 # Datum: 14.09.2021
 #
