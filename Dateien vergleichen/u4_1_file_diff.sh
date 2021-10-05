@@ -21,11 +21,9 @@ echo "************************************"
 echo "Dokument 1: $1"
 echo "Dokument 2: $2"
 echo ""
-echo "************************************"
 
 #Überprüfung ob beide Dokumente existieren
 if [[ -f "$1" && -f "$2" ]]; then
-  echo "Ausgabe der Zeilen:"
   # Variablen setzen
   # Überprüfung welches Dokument mehr Zeilen hat (-gt ist greater than)
   if [[ $(wc -l < "$1") -gt $(wc -l < "$2") ]];
@@ -37,6 +35,10 @@ if [[ -f "$1" && -f "$2" ]]; then
     smallerFile=$1
   fi
 
+  echo "Das grössere Dokument ist $biggerFile"
+  echo "************************************"
+  echo ""
+  echo "Ausgabe der Zeilen:"
   #Aus grossen Dokument Anzahl Zeilen holen. +1 weil die Länge bei 0 beginnt.
   differentRows=0
   amountRowsBiggerFile=$(("$(wc -l < "$biggerFile")"+1))
@@ -52,8 +54,8 @@ if [[ -f "$1" && -f "$2" ]]; then
     currentRowSmallerFile=$(sed -n ${i}p "$smallerFile")
 
     echo "------------------------------------"
-    echo "$i: $currentRowBiggerFile"
-    echo "$i: $currentRowSmallerFile"
+    echo "Zeile: $i | $biggerFile: $currentRowBiggerFile"
+    echo "Zeile: $i | $smallerFile: $currentRowSmallerFile"
     echo "------------------------------------"
 
     #Überprüfung ob aktuelle Zeile von beiden Dokumenten nicht gleich ist
