@@ -36,7 +36,7 @@ if [[ -f "$1" && -f "$2" ]]; then
   fi
 
   echo "Das grössere Dokument ist $biggerFile"
-  echo "************************************"
+  echo "------------------------------------"
   echo ""
   echo "Ausgabe der Zeilen:"
   #Aus grossen Dokument Anzahl Zeilen holen. +1 weil die Länge bei 0 beginnt.
@@ -56,21 +56,20 @@ if [[ -f "$1" && -f "$2" ]]; then
     echo "------------------------------------"
     echo "Zeile: $i | $biggerFile| $currentRowBiggerFile"
     echo "Zeile: $i | $smallerFile| $currentRowSmallerFile"
-    echo "------------------------------------"
 
     #Überprüfung ob aktuelle Zeile von beiden Dokumenten nicht gleich ist
     if [[ "$currentRowBiggerFile" != "$currentRowSmallerFile" ]]; then
       ((differentRows=differentRows+1))
 
+      echo ""
       echo "Zeile $i nicht gleich"
     fi
     ((i=i+1))
   done
 
+  echo "------------------------------------"
   echo ""
-  echo "************************************"
   echo "Insgesamt sind $differentRows Zeilen ungleich"
-  echo ""
   echo "************************************"
 else
   echo "Ungültige Dokumentangabe"
