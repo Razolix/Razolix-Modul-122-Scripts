@@ -23,7 +23,7 @@
 # Datum: 05.10.2021
 
 reNumbers='^[0-9]+$'
-randomNumber=$((RANDOM % 20 + 1))
+randomNumber=$[$RANDOM %20 +1]
 tries=5
 
 echo "Bitte geben Sie eine Zahl zwischen 1 und 20 ein:"
@@ -35,9 +35,11 @@ until [[ $randomNumber -eq $playerNumber ]]; do
     read playerNumber
     if [[ $playerNumber =~ $reNumbers ]] ; then
       if [[ $randomNumber -eq $playerNumber ]]; then
+          echo "----------------------------------------------------------"
           echo "Sie haben die Zahl erraten!"
+            echo "----------------------------------------------------------"
 
-       elif [[ $randomNumber < $playerNumber ]]; then
+       elif [[ $playerNumber -gt $randomNumber ]]; then
          ((tries=tries-1))
          echo "Die Zahl ist kleiner als $playerNumber"
 
