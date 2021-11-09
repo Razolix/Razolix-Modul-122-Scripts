@@ -1,0 +1,11 @@
+total 7
+-rw-r--r-- 1 adeomic 1049089 450 Nov  2 16:06 fox1.txt
+-rw-r--r-- 1 adeomic 1049089 460 Nov  2 16:06 fox2.txt
+-rw-r--r-- 1 adeomic 1049089 454 Nov  2 16:06 fox3.txt
+-rw-r--r-- 1 adeomic 1049089   0 Nov  2 16:13 ls-l.txt
+-rw-r--r-- 1 adeomic 1049089 127 Nov  2 16:06 Passwort.txt
+-rw-r--r-- 1 adeomic 1049089  71 Nov  2 16:06 Person.txt
+-rw-r--r-- 1 adeomic 1049089 166 Nov  2 16:06 testfile.txt
+-rw-r--r-- 1 adeomic 1049089 209 Nov  2 16:12 umleitung.sh
+-rw-r--r-- 1 adeomic 1049089   0 Nov  2 16:06 UserAndPw.txt
+-rw-r--r-- 1 adeomic 1049089   0 Nov  2 16:06 UserKlasse.txt
