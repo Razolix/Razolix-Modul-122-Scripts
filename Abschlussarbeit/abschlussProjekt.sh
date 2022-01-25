@@ -1,4 +1,19 @@
 #!/bin/bash
+#
+# Das Projekt orientiert sich auf ein Verwaltungssystem. Das Ganze spielt im Terminal ab, soll aber übersichtlich bleiben.
+# Es soll möglich sein eine Person hinzuzufügen, diese zu löschen oder auch zu bearbeiten. Man kann eine gewünschte Person
+# leicht anzeigen oder direkt alle Personen in der Liste aufzulisten.
+# Der Speicher besteht aus einem Textdokument. Ein weiteres Textdokument ist das Logdokument, bei dem jede Aktion
+# aufgeschrieben wird mit Uhrzeit.
+#
+# Start der Applikation:
+# ./abschlussProjekt.sh
+#
+# Daten speichern:
+# Ordner information |
+# persons.txt         | => wird generiert
+# log.txt            |
+#
 echo "--------------------------------------------------------------------------------"
 echo ""
 echo "Willkommen zum Verwaltungssystem"
@@ -107,7 +122,7 @@ echo "--------------------------------------------------------------------------
     if [[ "${myarray[1]}" == "${last_name}" && "${myarray[3]}" == "${phone_number}" ]]; then
       echo "Person vorhanden!"
       personFound=true
-      #Person wird auf Linie x enternt, d hilft daf�r
+      #Person wird auf Linie x enternt, d hilft daf�r
       sed -i "${line}d" "${concat_directory}"/persons.txt
       echo "Person erfolgreich geloest: ${myarray[0]} | ${myarray[1]} | ${myarray[2]} | ${myarray[3]}"
       echo ""
