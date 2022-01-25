@@ -71,8 +71,6 @@ add_person () {
   personFound=false
   #persons.txt wird durchgeloopt
   while read p; do
-    IFS=" | " read -a myarray <<< "$p"
-
     #Falls "Nachname" = read von Person und "Telefonnummer" = read von Person gleich
     if [[ "${myarray[1]}" == "${last_name}" && "${myarray[3]}" == "${phonenumber}" ]]; then
       personFound=true
@@ -116,8 +114,6 @@ echo "--------------------------------------------------------------------------
   while read p; do
     #Line + 1
     (( line++ ))
-    IFS=" | " read -a myarray <<< "$p"
-
     #Falls "Nachname" = read von Person und "Telefonnummer" = read von Person gleich
     if [[ "${myarray[1]}" == "${last_name}" && "${myarray[3]}" == "${phone_number}" ]]; then
       echo "Person vorhanden!"
@@ -158,7 +154,6 @@ echo "--------------------------------------------------------------------------
   while read p; do
     #Line + 1
     (( line++ ))
-    IFS=" | " read -a myarray <<< "$p"
     #Falls "Nachname" = read von Person und "Telefonnummer" = read von Person gleich
     if [[ "${myarray[1]}" == "${last_name}" && "${myarray[3]}" == "${phone_number}" ]]; then
       echo "Person vorhanden!"
@@ -216,7 +211,6 @@ echo "--------------------------------------------------------------------------
   #Loop durch persons.txt
   while read p; do
     (( line++ ))
-    IFS=" | " read -a myarray <<< "$p"
     #Falls "Nachname" = read von Person und "Telefonnummer" = read von Person gleich
     if [[ "${myarray[1]}" == "${last_name}" && "${myarray[3]}" == "${phone_number}" ]]; then
       personFound=true
